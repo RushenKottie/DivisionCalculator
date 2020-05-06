@@ -2,7 +2,7 @@ package calculator;
 
 public class Validator {
 
-    private boolean validation;
+    private boolean validation = false;
     private String errorMessage;
 
     public boolean isValidation() {

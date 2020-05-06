@@ -9,8 +9,8 @@ public class CalculatorTest {
 
     @Test
     public void setDividendTestPositive() {
-        calculator.getValidator().setValidation(false);
-        calculator.getValidator().setErrorMessage(null);
+        calculator.getddValidator().setValidation(false);
+        calculator.getddValidator().setErrorMessage(null);
         String[] test = new String[]{"147","-9","0","98.45","-367832.11"};
 
         for(String iterator:test){
@@ -22,8 +22,8 @@ public class CalculatorTest {
 
     @Test
     public void setDividendTestNegative(){
-        calculator.getValidator().setValidation(true);
-        calculator.getValidator().setErrorMessage(null);
+        calculator.getddValidator().setValidation(true);
+        calculator.getddValidator().setErrorMessage(null);
         String[] test = new String[]{"jnI","0,89","98.4.5","300/7"};
 
         for(String iterator:test){
@@ -35,8 +35,8 @@ public class CalculatorTest {
 
     @Test
     public void setDivisorTestPositive() {
-        calculator.getValidator().setValidation(false);
-        calculator.getValidator().setErrorMessage(null);
+        calculator.getdrValidator().setValidation(false);
+        calculator.getdrValidator().setErrorMessage(null);
         String[] test = new String[]{"147","-9","98.45","-367832.11"};
 
         for(String iterator:test){
@@ -48,8 +48,8 @@ public class CalculatorTest {
 
     @Test
     public void setDivisorTestNegative(){
-        calculator.getValidator().setValidation(true);
-        calculator.getValidator().setErrorMessage(null);
+        calculator.getdrValidator().setValidation(true);
+        calculator.getdrValidator().setErrorMessage(null);
         String[] test = new String[]{"jnI","0,89","98.4.5","300/7","0"};
 
         for(String iterator:test){
