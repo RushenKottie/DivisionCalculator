@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 public class Controller {
     Validator dividendOk;
     Validator divisorOk;
-    //String errorText ="Введено некорректное значение. Введите только цифры. Для дробных чисел используйте точку";
+
 
     Calculator calculator;
 
@@ -31,7 +31,7 @@ public class Controller {
     private Text error;
 
 
-    @FXML
+    @FXML //if "Результат" button is clicked
     public void buttonClick(ActionEvent actionEvent){
         if(actionEvent.getSource() instanceof Button){
             error.setOpacity(0.0);
@@ -57,6 +57,9 @@ public class Controller {
 
     }
 
+    /**
+     * Check if dividend is number in appropriate format. If not display an error message
+     */
     public void checkDividend(){
         dividendOk = calculator.setDividend(dividend.getText());
         if(!dividendOk.isValidation()){
@@ -64,6 +67,10 @@ public class Controller {
             error.setOpacity(1.0);
         }
     }
+
+    /**
+     * Check if divisor is number in appropriate format ant not zero. If not display an error message
+     */
     public void checkDivisor(){
       divisorOk = calculator.setDivisor(divisor.getText());
       if(!divisorOk.isValidation()){

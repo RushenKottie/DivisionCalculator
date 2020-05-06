@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/UI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/UI.fxml")); // get visual preset from xml file
         primaryStage.setTitle("Division calculator");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
